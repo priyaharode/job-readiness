@@ -258,66 +258,29 @@ export function App() {
 
     <!-- ── VIEW: ABOUT ───────────────────────────────────────────────── -->
     <section class="view" id="view-about">
-      <div class="about-content">
-        <div class="about-hero">
-          <div class="about-glyph">⬡</div>
-          <h2>About CareerAI</h2>
-          <p>A complete ML-powered career guidance system — from data generation to prediction.</p>
-        </div>
+  <div class="about-content">
 
-        <div class="about-grid">
-          <div class="about-card">
-            <div class="ac-num">8K</div>
-            <div class="ac-label">Training Rows</div>
-            <div class="ac-desc">Synthetic but realistic candidate profiles generated with weighted scoring logic</div>
-          </div>
-          <div class="about-card">
-            <div class="ac-num">4</div>
-            <div class="ac-label">ML Models</div>
-            <div class="ac-desc">Logistic Regression, Decision Tree, Random Forest, XGBoost — best selected</div>
-          </div>
-          <div class="about-card">
-            <div class="ac-num">91</div>
-            <div class="ac-label">Features</div>
-            <div class="ac-desc">TF-IDF (skills/projects/certs) + scaled numerics combined as sparse matrix</div>
-          </div>
-          <div class="about-card">
-            <div class="ac-num">~95%</div>
-            <div class="ac-label">Accuracy</div>
-            <div class="ac-desc">XGBoost tuned with RandomizedSearchCV, ROC-AUC ≥ 0.98</div>
-          </div>
-        </div>
+    <div class="about-hero">
+      <div class="about-glyph">⬡</div>
+      <h2>About CareerAI</h2>
+      <p>
+        CareerAI is a web application that evaluates job readiness,
+        suggests suitable career roles, 
+        <br>and identifies skill gaps based on user input.
+      </p>
+    </div>
 
-        <div class="tech-stack">
-          <h3>Tech Stack</h3>
-          <div class="tech-pills">
-            ${['Python','Flask','scikit-learn','XGBoost','TF-IDF','Cosine Similarity',
-               'Vite','Vanilla JS','CSS Variables','PWA','Service Worker','Web Manifest']
-              .map(t=>`<span class="tech-pill">${t}</span>`).join('')}
-          </div>
-        </div>
-
-        <div class="pipeline-steps">
-          <h3>How It Works</h3>
-          <div class="steps">
-            ${['Dataset generation (8,000 rows with weighted scoring)',
-               'TF-IDF vectorisation of Skills, Projects, Certifications',
-               'StandardScaler on CGPA, Internships, Aptitude etc.',
-               'hstack() merges text + numeric into 91-feature sparse matrix',
-               'XGBoost trained & tuned with RandomizedSearchCV',
-               'Model + vectorisers serialised to bundle.pkl',
-               'Flask API loads pkl once, serves predictions in <50ms',
-               'Cosine Similarity recommends top-3 job roles',
-               'Set-difference reveals missing skills for target role']
-              .map((s,i)=>`
-              <div class="step-item">
-                <span class="step-n">0${i+1}</span>
-                <span class="step-txt">${s}</span>
-              </div>`).join('')}
-          </div>
-        </div>
+    <footer class="about-footer">
+      <div class="footer-right">
+        <span class="version-tag">v1.0</span>
+        <a href="https://github.com/priyaharode" target="_blank" class="about-link">
+          GitHub ↗
+        </a>
       </div>
-    </section>
+    </footer>
+
+  </div>
+</section>
 
   </main>
 
